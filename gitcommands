@@ -1,0 +1,202 @@
+DevOps Training 
+
+GIT Basic Commands
+
+git init
+git config --global user.name"manojkumar.kalidindi"
+git config --global user.email"manojkumar.kalidindi65@gmail.com"
+
+git config --list
+
+touch filename
+ls
+ls -a
+ll
+mkdir gangadhar
+rm gangadhar 
+cd 
+
+
+git status
+git add filename
+git commit -m "any msg"filename{for moving Spec file from staging to local or for modified files moving from workspace to local}
+git log
+git show commit ID
+git add . or git add * or git add -A
+git commit -m "message"{for moving all the files from staging to local}
+git reset HEAD filename
+git reset --soft commitID
+git reset --mixed commitID
+git diff folder/filename
+
+git clone pathofcentralrepositary
+git push
+git pull --rebase
+git log --oneline
+git log -3 {for recent specific number of commits}
+git log --oneline -n
+git log --author=gangadhar
+git log --author=gangadhar --oneline
+git log --author=gangadhar --oneline -3
+git log --since=yy-mm-dd
+git log --until=2021-08-21
+git log --since=yyyy-mm-dd --until=yyyy-mm-dd
+{or}
+git log --after=yyyy-mm-dd --before=yyyy-mm-dd 
+git log --grep="commitmsg"
+git log --filename{ for specific file commit data}
+
+BRANCH ?
+
+git branch
+git branch branch-name
+git branch master1
+git checkout -b branchname{creates and takes u inside that branch}
+git checkout master1
+git branch
+git merge branch-name
+
+git cherry-pick cid (single commit)
+
+git branch -d branch-name
+
+git push origin branch-name (loacl to central repo)
+or
+git push path/of/c-repo branch-name
+
+git branch -d branch-name  (local machine)
+
+git push origin -d branch-name  (central repo)
+
+
+===============================
+touch, cat, vi
+
+TOUCH
+----------
+touch file1
+ls
+touch file2 file3 file4
+ls
+
+CAT
+------
+cat > file5
+....
+....
+ctrl+d
+
+cat file5
+
+cat >> file5
+...
+....
+ctrl+d
+
+VI
+----
+vi file6
+
+esc i
+.....
+....
+.....
+esc :w
+esc :q
+or
+esc :wq!
+
+------------------------------
+
+git status
+git config --global alias.s "status"
+git s
+
+git log --oneline
+git config --global alias.l1 "log --oneline"
+git l1
+
+git config --global --unset  alias.l1
+
+git log
+git config --global alias.l "log"
+git l
+
+git config --global --unset  alias.l
+git config --list
+
+git config --list
+git config --global alias.cl "config --list"
+git cl
+
+git config --global --unset  alias.cl
+
+
+git config --global user.name "Prasad"
+
+git config --global user.name "DevOps"
+
+git config --global --unset user.name
+git config --global --unset user.email
+
+git config --list
+
+STASH
+======
+git stash list
+
+git stash save "stash1"
+
+git stash list
+
+git stash show stash-name
+git stash show -p stash-name
+
+POP, APPLY, DROP
+
+POP
+-----
+git stash pop
+git stash pop stash@{x}
+
+APPLY
+--------
+git stash apply 
+git stash apply stash@{x}
+
+DROP
+-------
+git stash drop
+git stash drop stash@{x}
+
+
+TAG
+======
+git tag
+git tag tag-name
+git tag
+git show tag-name
+git tag -d tag-name
+
+git tag tag-name cid
+
+git push origin tag-name
+git push --tags (all tags)
+
+git push origin -d tag-name
+===================================
+git commit --amend -m "new label"{can change the label msg & also commits files from staging area  for latest commit}
+
+{for multiple msg}
+git commit -m "first line msg" -m "second line msg" -m "thirsd line msg"
+
+git revert commitID{to revert back to previous changes}
+==============================================
+git branch -r{to list remote branches i.e origin/master}
+
+
+
+
+
+
+
